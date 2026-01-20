@@ -29,7 +29,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
         lastName: '',
         turnover: '',
         treatments: '',
-        canAfford: '',
+        canAfford: 'Yes',
         email: '',
         countryCode: '+1',
         phone: ''
@@ -46,7 +46,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
             lastName: '',
             turnover: '',
             treatments: '',
-            canAfford: '',
+            canAfford: 'Yes',
             email: '',
             countryCode: '+1',
             phone: ''
