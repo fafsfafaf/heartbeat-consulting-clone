@@ -127,7 +127,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
             className={`w-full p-4 rounded-lg border-2 text-left transition-all duration-200 mb-3 flex items-center justify-between group
         ${selected
                     ? 'border-[#FB841C] bg-[#FB841C]/5 text-black'
-                    : 'border-gray-200 hover:border-[#FB841C]/50 text-gray-600'}`}
+                    : 'border-gray-200 md:hover:border-[#FB841C]/50 text-gray-600'}`}
         >
             <span className={`font-bold ${selected ? 'text-[#FB841C]' : 'group-hover:text-black'}`}>{label}</span>
             {selected && <CheckCircle2 className="text-[#FB841C] w-5 h-5" />}
