@@ -143,7 +143,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
             <div className="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity" onClick={handleClose}></div>
 
             {/* Modal Content - Adjusted maxWidth for final step to accommodate content */}
-            <div className={`bg-white rounded-2xl w-full ${step === 8 ? 'max-w-4xl' : 'max-w-lg'} relative z-10 overflow-hidden shadow-2xl animate-in fade-in zoom-in-95 duration-300 flex flex-col max-h-[90vh]`}>
+            <div className={`bg-white rounded-2xl w-full ${step >= 7 ? 'max-w-5xl' : 'max-w-lg'} relative z-10 overflow-hidden shadow-2xl animate-in fade-in zoom-in-95 duration-300 flex flex-col max-h-[90vh]`}>
 
                 {/* Header */}
                 <div className="bg-gray-50 border-b border-gray-100 p-4 flex items-center justify-between shrink-0">
