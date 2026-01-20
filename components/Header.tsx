@@ -22,7 +22,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenModal, onNavigate }) => {
 
   const handleNavClick = (item: string) => {
     if (onNavigate) {
-      switch(item) {
+      switch (item) {
         case 'HOME': onNavigate('home'); break;
         case 'ABOUT US': onNavigate('about'); break;
         case 'WHO WE SERVE': onNavigate('serve'); break;
@@ -39,13 +39,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenModal, onNavigate }) => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#141414]/80 backdrop-blur-md py-4 border-b border-white/5' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
         {/* Logo */}
-        <div 
-          className="flex items-center gap-2 cursor-pointer" 
+        <div
+          className="flex items-center gap-2 cursor-pointer"
           onClick={() => onNavigate && onNavigate('home')}
         >
           <div className="text-2xl font-bold tracking-tighter flex items-center text-white">
-            {/* Simple H Icon representation to match screenshot vibe */}
-            <span className="text-3xl mr-1 font-sans">H</span> 
+            {/* Logo Icon */}
+            <img src="/logo.png" alt="HeartbyteAI Logo" className="h-8 w-8 mr-2 object-contain" />
             <span>Heartbyte<span className="text-[#FB841C]">AI</span></span>
           </div>
         </div>
@@ -54,7 +54,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenModal, onNavigate }) => {
         <nav className="hidden lg:flex items-center">
           {navItems.map((item, index) => (
             <React.Fragment key={item}>
-              <button 
+              <button
                 onClick={() => handleNavClick(item)}
                 className="text-white text-sm font-bold tracking-wide hover:text-[#FB841C] transition-colors uppercase cursor-pointer bg-transparent border-none p-0"
               >
@@ -74,7 +74,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenModal, onNavigate }) => {
         </div>
 
         {/* Mobile Toggle */}
-        <button 
+        <button
           className="lg:hidden text-white"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
@@ -85,9 +85,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenModal, onNavigate }) => {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-[#141414] border-b border-white/10 p-4 flex flex-col gap-4 lg:hidden animate-in slide-in-from-top-5 shadow-2xl">
-           {navItems.map((item) => (
-            <button 
-              key={item} 
+          {navItems.map((item) => (
+            <button
+              key={item}
               className="text-left text-white font-bold hover:text-[#FB841C] py-2 border-b border-white/5 last:border-0"
               onClick={() => {
                 handleNavClick(item);
