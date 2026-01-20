@@ -43,11 +43,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenModal, onNavigate }) => {
           className="flex items-center gap-2 cursor-pointer"
           onClick={() => onNavigate && onNavigate('home')}
         >
-          <div className="text-2xl font-bold tracking-tighter flex items-center text-white">
-            {/* Logo Icon */}
-            <img src="/logo.png" alt="HeartbyteAI Logo" className="h-8 w-8 mr-2 object-contain" />
-            <span>Heartbyte<span className="text-[#FB841C]">AI</span></span>
-          </div>
+          <img src="/full-logo.png" alt="HeartbyteAI Logo" className="h-10 object-contain" />
         </div>
 
         {/* Desktop Nav with Orange Separators */}
