@@ -379,26 +379,28 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                                 </div>
                             )}
 
-                            {/* STEP 7: Calendly Embed (Placeholder) */}
+                            {/* STEP 7: LeadConnector Embed */}
                             {step === 7 && (
-                                <div className="space-y-6 text-center animate-in slide-in-from-right-8 fade-in duration-300">
-                                    <h3 className="text-xl md:text-2xl font-bold text-black leading-tight px-4 uppercase tracking-tight">
-                                        Speak With One of Our Strategists On Exactly How We Can <span className="text-[#FB841C]">Fill Your Calendar</span> With Financially Qualified Patients
+                                <div className="space-y-6 text-center animate-in slide-in-from-right-8 fade-in duration-300 h-full flex flex-col">
+                                    <h3 className="text-xl md:text-2xl font-bold text-black leading-tight px-4 uppercase tracking-tight shrink-0">
+                                        Pick a time for your <span className="text-[#FB841C]">Strategy Call</span>
                                     </h3>
 
-                                    {/* Placeholder for Calendly Iframe */}
-                                    <div className="w-full h-[400px] bg-gray-50 border border-gray-200 rounded-lg flex flex-col items-center justify-center relative overflow-hidden group">
-                                        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=1000')] bg-cover opacity-5 blur-[1px]"></div>
+                                    {/* LeadConnector Embed */}
+                                    <div className="w-full flex-grow bg-white rounded-lg overflow-hidden flex flex-col relative min-h-[500px]">
+                                        <iframe
+                                            src="https://api.leadconnectorhq.com/widget/booking/cn9eXnNiwLwOJxTCyp6G"
+                                            style={{ width: '100%', border: 'none', height: '100%', minHeight: '500px' }}
+                                            id="booking-widget"
+                                            title="Booking Calendar"
+                                        ></iframe>
+                                    </div>
 
-                                        <CalendarIcon className="text-gray-300 w-12 h-12 mb-4" />
-                                        <div className="relative z-10 px-6 py-4 bg-white rounded-xl shadow-lg border border-gray-100 max-w-xs mx-auto">
-                                            <p className="text-gray-600 text-sm mb-3">
-                                                This is a placeholder for the Calendly embed.
-                                            </p>
-                                            <Button onClick={() => setStep(8)} fullWidth>
-                                                Simulate Booking Confirmation
-                                            </Button>
-                                        </div>
+                                    <div className="shrink-0 pt-2">
+                                        <p className="text-xs text-gray-500 mb-2">After booking, click the button below to continue.</p>
+                                        <Button onClick={() => setStep(8)} fullWidth>
+                                            I have booked my call - Continue
+                                        </Button>
                                     </div>
                                 </div>
                             )}
