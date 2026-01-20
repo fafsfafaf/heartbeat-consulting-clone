@@ -138,7 +138,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
     const totalSteps = 7;
 
     return (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center px-4">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center px-2 md:px-4">
             {/* Backdrop */}
             <div className="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity" onClick={handleClose}></div>
 
@@ -169,7 +169,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                 </div>
 
                 {/* Body - Scrollable */}
-                <div className="p-8 overflow-y-auto custom-scrollbar">
+                <div className="p-4 md:p-8 overflow-y-auto custom-scrollbar">
 
                     {/* Disqualified View */}
                     {isDisqualified ? (
