@@ -44,8 +44,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenModal, onNavigate }) => {
           onClick={() => onNavigate && onNavigate('home')}
         >
           <div className="text-2xl font-bold tracking-tighter flex items-center text-white">
-            {/* Logo Icon */}
-            <img src="/logo.png" alt="HeartbyteAI Logo" className="h-8 w-8 mr-2 object-contain" />
+            {/* Simple H Icon representation to match screenshot vibe */}
+            <span className="text-3xl mr-1 font-sans">H</span>
             <span>Heartbyte<span className="text-[#FB841C]">AI</span></span>
           </div>
         </div>

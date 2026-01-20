@@ -63,9 +63,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Brand Column - Always Visible */}
           <div className="md:col-span-4 lg:col-span-5 flex flex-col items-start mb-6 md:mb-0">
             <div className="flex items-center gap-2 mb-6 cursor-pointer" onClick={() => onNavigate && onNavigate('home')}>
-              {/* Logo Icon */}
-              <div className="mr-3">
-                <img src="/logo.png" alt="HeartbyteAI Logo" className="w-10 h-10 object-contain" />
+              {/* Logo Icon Placeholder - Stylized H */}
+              <div className="w-10 h-10 bg-black text-white rounded flex items-center justify-center font-bold text-2xl font-sans mr-3">
+                H
               </div>
               <span className="text-3xl font-bold tracking-tight text-black">
                 Heartbyte<span className="text-[#FB841C]">AI</span>
