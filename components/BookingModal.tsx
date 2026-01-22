@@ -140,7 +140,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
     return (
         <div className="fixed inset-0 z-[100] flex items-center justify-center px-2 md:px-4">
             {/* Backdrop */}
-            <div className="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity" onClick={handleClose}></div>
+            <div className="absolute inset-0 bg-black/90 transition-opacity" onClick={handleClose}></div>
 
             {/* Modal Content - Adjusted maxWidth for final step to accommodate content */}
             <div className={`bg-white rounded-2xl w-full ${step >= 7 ? 'max-w-5xl' : 'max-w-lg'} relative z-10 overflow-hidden shadow-2xl animate-in fade-in zoom-in-95 duration-300 flex flex-col max-h-[90vh]`}>
@@ -431,7 +431,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                                                 <Play className="fill-white text-white w-8 h-8" />
                                             </div>
                                         </div>
-                                        <div className="absolute bottom-4 left-4 bg-black/70 backdrop-blur px-3 py-1 rounded text-white text-xs font-bold uppercase tracking-widest border border-white/10">
+                                        <div className="absolute bottom-4 left-4 bg-black/90 px-3 py-1 rounded text-white text-xs font-bold uppercase tracking-widest border border-white/10">
                                             The Celebrity Funnel Explained
                                         </div>
                                     </div>
