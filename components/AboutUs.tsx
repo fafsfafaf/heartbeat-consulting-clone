@@ -9,21 +9,21 @@ interface AboutUsProps {
 export const AboutUs: React.FC<AboutUsProps> = ({ onOpenModal }) => {
   return (
     <div className="bg-[#141414] min-h-screen text-white pt-24">
-      
+
       {/* --- HERO SECTION --- */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none"></div>
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#FB841C]/5 to-transparent pointer-events-none"></div>
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block mb-6">
-               <div className="bg-[#1f1f1f] px-3 py-1.5 rounded-[4px] text-[10px] font-bold tracking-widest text-white border border-[#333] uppercase shadow-sm">
-                  BEHIND THE SYSTEM
-               </div>
+              <div className="bg-[#1f1f1f] px-3 py-1.5 rounded-[4px] text-[10px] font-bold tracking-widest text-white border border-[#333] uppercase shadow-sm">
+                BEHIND THE SYSTEM
+              </div>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8">
-              We Build <span className="text-[#FB841C]">Market Leaders</span> <br/>
+              We Build <span className="text-[#FB841C]">Market Leaders</span> <br />
               in Longevity Medicine.
             </h1>
             <p className="text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto mb-10">
@@ -62,18 +62,18 @@ export const AboutUs: React.FC<AboutUsProps> = ({ onOpenModal }) => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-16">
             <div className="w-full md:w-1/2">
-               <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
-                  <div className="absolute inset-0 bg-[#FB841C]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 mix-blend-overlay"></div>
-                  <img 
-                    src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2940&auto=format&fit=crop" 
-                    alt="Team Planning" 
-                    className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
-                  />
-               </div>
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
+                <div className="absolute inset-0 bg-[#FB841C]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 mix-blend-overlay"></div>
+                <img
+                  src="/assets/about-us.jpg"
+                  alt="Team Planning"
+                  className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                />
+              </div>
             </div>
             <div className="w-full md:w-1/2 space-y-6">
               <h3 className="text-[#FB841C] font-bold tracking-widest uppercase text-sm">Our Philosophy</h3>
-              <h2 className="text-4xl font-bold leading-tight">We Don't Guess. <br/>We Engineer Growth.</h2>
+              <h2 className="text-4xl font-bold leading-tight">We Don't Guess. <br />We Engineer Growth.</h2>
               <div className="space-y-4 text-gray-400 text-lg leading-relaxed">
                 <p>
                   Most agencies treat medical clinics like gyms or restaurants. They run generic ads and dump unqualified leads on your front desk. That doesn't work for high-ticket Longevity Medicine.
@@ -126,14 +126,14 @@ export const AboutUs: React.FC<AboutUsProps> = ({ onOpenModal }) => {
 
       {/* --- CTA --- */}
       <section className="py-24 relative overflow-hidden text-center">
-         <div className="absolute inset-0 bg-gradient-to-t from-[#FB841C]/10 to-transparent pointer-events-none"></div>
-         <div className="container mx-auto px-4 relative z-10">
-            <h2 className="text-4xl md:text-6xl font-bold mb-8">Ready to dominate?</h2>
-            <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
-              We only work with one clinic per territory to ensure market dominance. Check if your area is available.
-            </p>
-            <Button onClick={onOpenModal} className="text-lg px-10 py-4">Check Availability</Button>
-         </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#FB841C]/10 to-transparent pointer-events-none"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <h2 className="text-4xl md:text-6xl font-bold mb-8">Ready to dominate?</h2>
+          <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+            We only work with one clinic per territory to ensure market dominance. Check if your area is available.
+          </p>
+          <Button onClick={onOpenModal} className="text-lg px-10 py-4">Check Availability</Button>
+        </div>
       </section>
 
     </div>

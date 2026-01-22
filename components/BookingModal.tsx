@@ -425,7 +425,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
 
                                     {/* Main Video */}
                                     <div className="w-full aspect-video bg-black rounded-xl overflow-hidden shadow-2xl relative group cursor-pointer border-4 border-black">
-                                        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1576091160550-2187d80aeff2?q=80&w=2940&auto=format&fit=crop')] bg-cover opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                                        <div className="absolute inset-0 bg-[url('/assets/video-thumbnail.jpg')] bg-cover opacity-60 group-hover:opacity-40 transition-opacity"></div>
                                         <div className="absolute inset-0 flex items-center justify-center">
                                             <div className="w-20 h-20 bg-[#FB841C] rounded-full flex items-center justify-center pl-1 shadow-[0_0_40px_rgba(251,132,28,0.5)] group-hover:scale-110 transition-transform">
                                                 <Play className="fill-white text-white w-8 h-8" />
@@ -446,7 +446,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                                                 <div>
                                                     <h4 className="font-bold text-black text-lg mb-1 uppercase tracking-wide">Important: Check Your Email Now</h4>
                                                     <p className="text-gray-800 leading-relaxed">
-                                                        Go to your email, Open <span className="font-bold bg-white px-1 rounded border border-[#FB841C]/20">"Invitation from an unknown sender"</span> from a <span className="font-mono bg-black text-white px-1.5 rounded text-sm mx-1">@emberflowai.com</span> domain, and click the <span className="font-bold text-[#FB841C]">"I Know The Sender"</span> button.
+                                                        Go to your email, Open <span className="font-bold bg-white px-1 rounded border border-[#FB841C]/20">"Invitation from an unknown sender"</span> from a <span className="font-mono bg-black text-white px-1.5 rounded text-sm mx-1">@Heartbyteai.com</span> domain, and click the <span className="font-bold text-[#FB841C]">"I Know The Sender"</span> button.
                                                     </p>
                                                 </div>
 
