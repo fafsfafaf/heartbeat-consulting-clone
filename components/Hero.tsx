@@ -28,49 +28,56 @@ export const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
 
   return (
     <section className="relative pt-20 pb-8 lg:pt-24 lg:pb-12 lg:min-h-[85vh] flex flex-col justify-center overflow-hidden bg-[#141414]">
-      
+
       {/* ========================================================================
           SECTION: BACKGROUND SYSTEM (GRID & GRADIENTS)
          ======================================================================== */}
-       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div 
-            className="absolute inset-0"
-            style={{
-                // Dynamic Grid Pattern Generation
-                backgroundImage: `linear-gradient(to right, rgba(251, 132, 28, ${gridOpacity}) 1px, transparent 1px),
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div
+          className="absolute inset-0"
+          style={{
+            // Dynamic Grid Pattern Generation
+            backgroundImage: `linear-gradient(to right, rgba(251, 132, 28, ${gridOpacity}) 1px, transparent 1px),
                                   linear-gradient(to bottom, rgba(251, 132, 28, ${gridOpacity}) 1px, transparent 1px)`,
-                backgroundSize: `${gridSize}px ${gridSize}px`,
-                // Dynamic Grid Position
-                backgroundPosition: `${gridPos.x}px ${gridPos.y}px`,
-                // Dynamic Mask Position (The "Spotlight")
-                maskImage: `radial-gradient(ellipse at ${maskPos.x}% ${maskPos.y}%, black 30%, transparent 80%)`,
-                WebkitMaskImage: `radial-gradient(ellipse at ${maskPos.x}% ${maskPos.y}%, black 30%, transparent 80%)`,
-            }}
+            backgroundSize: `${gridSize}px ${gridSize}px`,
+            // Dynamic Grid Position
+            backgroundPosition: `${gridPos.x}px ${gridPos.y}px`,
+            // Dynamic Mask Position (The "Spotlight")
+            maskImage: `radial-gradient(ellipse at ${maskPos.x}% ${maskPos.y}%, black 30%, transparent 80%)`,
+            WebkitMaskImage: `radial-gradient(ellipse at ${maskPos.x}% ${maskPos.y}%, black 30%, transparent 80%)`,
+          }}
         ></div>
-        
+
         {/* Header Fade Overlay: Top */}
         <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-[#141414] via-[#141414]/90 to-transparent"></div>
 
         {/* Bottom Fade Overlay for Seamless Transition */}
-        <div 
-            className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#141414] via-[#141414]/90 to-transparent"
-            style={{ height: `${bottomFadeHeight}px` }}
+        <div
+          className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#141414] via-[#141414]/90 to-transparent"
+          style={{ height: `${bottomFadeHeight}px` }}
         ></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10 max-w-[1150px]">
         <div className="flex flex-col lg:flex-row items-center gap-5 lg:gap-12">
-          
+
           {/* ========================================================================
               SECTION: VIDEO PLAYER (LEFT COLUMN)
              ======================================================================== */}
           <div className="lg:w-[55%] w-full order-1">
-            <div className="relative rounded-xl overflow-hidden shadow-2xl bg-[#141414] border border-[#333] group">
-              {/* Wistia Embed - Using createElement to bypass TypeScript Custom Element issues */}
-              {createElement('wistia-player', {
-                'media-id': "qgncf6wce6",
-                aspect: "1.7777777777777777"
-              })}
+            <div className="relative rounded-xl overflow-hidden shadow-2xl bg-[#141414] border border-[#333] group aspect-video">
+              {/* Wistia Facade */}
+              <iframe
+                src="https://fast.wistia.net/embed/iframe/qgncf6wce6?videoFoam=true&autoPlay=false"
+                title="Heartbyte AI Video"
+                allow="autoplay; fullscreen"
+                allowTransparency={true}
+                frameBorder="0"
+                scrolling="no"
+                className="w-full h-full absolute inset-0 rounded-xl"
+                name="wistia_embed"
+                loading="lazy"
+              ></iframe>
             </div>
           </div>
 
@@ -78,44 +85,44 @@ export const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
               SECTION: TEXT CONTENT (RIGHT COLUMN)
              ======================================================================== */}
           <div className="lg:w-[45%] w-full text-center lg:text-left space-y-3 order-2">
-            
+
             {/* Badge */}
             <div className="inline-block bg-[#1f1f1f] border border-[#333] rounded-[3px] px-2 py-1 mx-auto lg:mx-0">
-               <span className="text-white font-bold text-[9px] tracking-widest uppercase">
-                 Heartbyte <span className="text-[#FB841C]">AI</span>
-               </span>
+              <span className="text-white font-bold text-[9px] tracking-widest uppercase">
+                Heartbyte <span className="text-[#FB841C]">AI</span>
+              </span>
             </div>
 
             {/* Headline with Live Styles */}
-            <h1 
-                className="font-bold text-white tracking-tight transition-all duration-200 mx-auto lg:mx-0"
-                style={{
-                    fontSize: `${typo.headlineSize}px`,
-                    lineHeight: typo.lineHeight,
-                    maxWidth: `${typo.maxWidth}%`,
-                    fontFamily: typo.fontFamily,
-                }}
+            <h1
+              className="font-bold text-white tracking-tight transition-all duration-200 mx-auto lg:mx-0"
+              style={{
+                fontSize: `${typo.headlineSize}px`,
+                lineHeight: typo.lineHeight,
+                maxWidth: `${typo.maxWidth}%`,
+                fontFamily: typo.fontFamily,
+              }}
             >
               {/* Force first line together */}
               <span className="whitespace-nowrap inline-flex items-baseline flex-wrap justify-center lg:justify-start">
-                Get 15–30 
-                <span 
-                    className="text-[#FB841C] font-script font-normal inline-block transition-all duration-200 relative"
-                    style={{
-                        fontSize: `${typo.scriptScale}%`,
-                        transform: `translateY(${typo.scriptY}px) rotate(${typo.scriptRotate}deg)`,
-                        marginLeft: `${typo.scriptMargin}px`,
-                        marginRight: `${typo.scriptMargin}px`,
-                    }}
+                Get 15–30
+                <span
+                  className="text-[#FB841C] font-script font-normal inline-block transition-all duration-200 relative"
+                  style={{
+                    fontSize: `${typo.scriptScale}%`,
+                    transform: `translateY(${typo.scriptY}px) rotate(${typo.scriptRotate}deg)`,
+                    marginLeft: `${typo.scriptMargin}px`,
+                    marginRight: `${typo.scriptMargin}px`,
+                  }}
                 >
-                    Qualified Peptide Patients
+                  Qualified Peptide Patients
                 </span>
               </span>
-              
+
               {/* Conditional Break 1 */}
               {typo.breakAfterScript ? <br className="block" /> : ' '}
 
-              Every Single Month, 
+              Every Single Month,
 
               {/* Conditional Break 2 */}
               {typo.breakAfterMonth ? <br className="block" /> : ' '}
@@ -141,40 +148,40 @@ export const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
           </div>
 
         </div>
-        
+
         {/* ========================================================================
             SECTION: LOGOS (BEKANNT AUS)
            ======================================================================== */}
         <div className="mt-8 lg:mt-16 w-full max-w-[950px] mx-auto relative">
-             {/* Horizontal Line Container */}
-             <div className="relative flex items-center justify-center mb-6 lg:mb-10">
-                 
-                 {/* Badge */}
-                 <div className="relative z-10 bg-[#141414] px-4">
-                     <div className="bg-[#1f1f1f] px-2.5 py-1 rounded-[3px] text-[9px] font-bold tracking-widest text-white border border-[#333] uppercase shadow-sm">
-                        Trusted <span className="text-[#FB841C]">By</span>
-                     </div>
-                 </div>
-            </div>
-            
-            {/* Logos Row - Spaced Exactly like reference */}
-            <div className="flex flex-wrap justify-center lg:justify-between items-center px-4 md:px-20 gap-8 opacity-60 text-white hover:opacity-100 transition-opacity duration-300">
-                {/* A4M */}
-                <div className="flex items-center gap-3">
-                   <div className="flex flex-col leading-[0.9]">
-                     <span className="font-bold text-xl tracking-[0.05em] text-white">A4M</span>
-                     <span className="font-light text-[8px] tracking-[0.2em] text-white uppercase">Education</span>
-                   </div>
-                </div>
+          {/* Horizontal Line Container */}
+          <div className="relative flex items-center justify-center mb-6 lg:mb-10">
 
-                {/* Seeds Scientific */}
-                <span className="text-lg font-serif font-bold tracking-tight text-white">SSRP</span>
-
-                {/* AMMG */}
-                 <div className="flex items-center gap-2">
-                    <span className="font-bold text-lg tracking-wide font-sans text-white">AMMG</span>
-                </div>
+            {/* Badge */}
+            <div className="relative z-10 bg-[#141414] px-4">
+              <div className="bg-[#1f1f1f] px-2.5 py-1 rounded-[3px] text-[9px] font-bold tracking-widest text-white border border-[#333] uppercase shadow-sm">
+                Trusted <span className="text-[#FB841C]">By</span>
+              </div>
             </div>
+          </div>
+
+          {/* Logos Row - Spaced Exactly like reference */}
+          <div className="flex flex-wrap justify-center lg:justify-between items-center px-4 md:px-20 gap-8 opacity-60 text-white hover:opacity-100 transition-opacity duration-300">
+            {/* A4M */}
+            <div className="flex items-center gap-3">
+              <div className="flex flex-col leading-[0.9]">
+                <span className="font-bold text-xl tracking-[0.05em] text-white">A4M</span>
+                <span className="font-light text-[8px] tracking-[0.2em] text-white uppercase">Education</span>
+              </div>
+            </div>
+
+            {/* Seeds Scientific */}
+            <span className="text-lg font-serif font-bold tracking-tight text-white">SSRP</span>
+
+            {/* AMMG */}
+            <div className="flex items-center gap-2">
+              <span className="font-bold text-lg tracking-wide font-sans text-white">AMMG</span>
+            </div>
+          </div>
         </div>
       </div>
 
