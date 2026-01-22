@@ -448,7 +448,7 @@ export const Blog: React.FC<BlogProps> = ({ onOpenModal }) => {
                             <div className="absolute bottom-8 left-8 right-8">
                                 <div className="flex gap-3 mb-4">
                                     <span className="bg-[#FB841C] text-white text-xs font-bold px-2 py-1 rounded">{selectedPost.category}</span>
-                                    <span className="bg-black/50 backdrop-blur-md text-gray-300 text-xs font-bold px-2 py-1 rounded flex items-center gap-1"><Clock size={12} /> {selectedPost.readTime}</span>
+                                    <span className="bg-black/80 text-gray-300 text-xs font-bold px-2 py-1 rounded flex items-center gap-1"><Clock size={12} /> {selectedPost.readTime}</span>
                                 </div>
                                 <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight shadow-lg">{selectedPost.title}</h1>
                             </div>
@@ -491,7 +491,7 @@ export const Blog: React.FC<BlogProps> = ({ onOpenModal }) => {
                                 {/* Image */}
                                 <div className="h-48 overflow-hidden relative">
                                     <div className="absolute top-4 left-4 z-10">
-                                        <span className="bg-black/70 backdrop-blur-md text-[#FB841C] text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded border border-[#FB841C]/20">
+                                        <span className="bg-black/90 text-[#FB841C] text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded border border-[#FB841C]/20">
                                             {post.category}
                                         </span>
                                     </div>

@@ -33,8 +33,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
           SECTION: BACKGROUND SYSTEM (GRID & GRADIENTS)
          ======================================================================== */}
       <div className="absolute inset-0 z-0 pointer-events-none">
+        {/* Mobile Background (Simple, Fast) */}
+        <div className="absolute inset-0 lg:hidden bg-[#141414]">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#FB841C]/5 via-transparent to-transparent opacity-50"></div>
+        </div>
+
+        {/* Desktop Background (Complex, Masked) */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 hidden lg:block"
           style={{
             // Dynamic Grid Pattern Generation
             backgroundImage: `linear-gradient(to right, rgba(251, 132, 28, ${gridOpacity}) 1px, transparent 1px),

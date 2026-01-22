@@ -112,7 +112,7 @@ export const WhoWeServe: React.FC<WhoWeServeProps> = ({ onOpenModal }) => {
                   />
 
                   {/* Floating Label */}
-                  <div className="absolute bottom-8 left-8 z-20 bg-[#141414]/90 backdrop-blur-md px-6 py-4 rounded-lg border border-white/10 border-l-4 border-l-[#FB841C]">
+                  <div className="absolute bottom-8 left-8 z-20 bg-[#141414]/90 px-6 py-4 rounded-lg border border-white/10 border-l-4 border-l-[#FB841C]">
                     <span className="block text-[#FB841C] text-xs font-bold uppercase tracking-widest mb-1">Tailored Strategy</span>
                     <span className="block text-white font-bold text-xl">{segment.title}</span>
                   </div>
