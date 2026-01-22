@@ -112,7 +112,30 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
 
         </div>
-      </div >
+      </div>
+
+      {/* Disclaimers */}
+      <div className="mt-16 md:mt-24 pt-8 border-t border-gray-100 text-center">
+        <p className="text-[10px] md:text-xs text-gray-400 max-w-4xl mx-auto leading-relaxed mb-6">
+          This site is not a part of the Facebook™ website or Facebook™ Inc. Additionally, this site is NOT endorsed by Facebook™ in any way. FACEBOOK™ is a trademark of FACEBOOK™, Inc
+        </p>
+        <div className="text-[10px] md:text-xs text-gray-400 max-w-5xl mx-auto space-y-4 leading-relaxed text-justify md:text-center opacity-80">
+          <p>
+            <strong>Earnings Disclaimer:</strong> We don’t believe in get-rich-quick programs or short cuts. As stated by law, we can not and do not make any guarantees about your own ability to get results or earn any money with our programs. We don’t know you and, besides, your results in life are up to you. Agreed? We’re here to help by running our marketing campaigns to move you forward, faster. However, nothing on this page or any of our websites or emails is a promise or guarantee of future earnings. Any financial numbers referenced here, or on any of our sites or emails, are simply estimates or projections or past results, and should not be considered exact, actual or as a promise of potential earnings – all numbers are illustrative only.
+          </p>
+          <p>
+            Results may vary and testimonials are not claimed to represent typical results. All testimonials are real. These results are meant as a showcase of what the best, most motivated and driven clients have done and should not be taken as average or typical results.
+          </p>
+          <p>
+            You should perform your own due diligence and use your own best judgment prior to making any investment decision pertaining to your business. By virtue of visiting this site or interacting with any portion of this site, you agree that you’re fully responsible for the investments you make and any outcomes that may result.
+          </p>
+        </div>
+
+        <p className="mt-8 text-[10px] text-gray-300">
+          © {new Date().getFullYear()} HeartbyteAI. All Rights Reserved.
+        </p>
+      </div>
+    </div >
     </footer >
   );
 };
