@@ -36,7 +36,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenModal, onNavigate }) => {
   const navItems = ['HOME', 'ABOUT US', 'WHO WE SERVE', 'CAREER', 'BLOG'];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#141414]/80 backdrop-blur-md py-4 border-b border-white/5' : 'bg-transparent py-6'}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 will-change-transform ${isScrolled ? 'bg-[#141414]/90 backdrop-blur-sm py-4 border-b border-white/5 shadow-lg' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
         {/* Logo */}
         <div
