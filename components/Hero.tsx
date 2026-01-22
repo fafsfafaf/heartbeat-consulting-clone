@@ -45,8 +45,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
             // Dynamic Mask Position (The "Spotlight")
             maskImage: `radial-gradient(ellipse at ${maskPos.x}% ${maskPos.y}%, black 30%, transparent 80%)`,
             WebkitMaskImage: `radial-gradient(ellipse at ${maskPos.x}% ${maskPos.y}%, black 30%, transparent 80%)`,
-            transform: 'translateZ(0)', // Force GPU layer
-            willChange: 'transform',
           }}
         ></div>
 

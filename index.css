@@ -37,14 +37,4 @@ body {
         linear-gradient(to bottom, rgba(251, 132, 28, 0.25) 1px, transparent 1px);
 }
 
-/* Hardware acceleration for fixed elements to prevent jitter */
-.fixed {
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-}
-
-/* Optimize backdrop blur performance */
-.backdrop-blur-sm {
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-}
+/* Remove hardware acceleration hacks that might cause layer explosion */
