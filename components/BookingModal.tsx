@@ -453,10 +453,13 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                                                     </p>
                                                 </div>
 
-                                                {/* Placeholder Image for Email Instruction */}
-                                                <div className="w-full h-40 bg-white border-2 border-dashed border-[#FB841C]/30 rounded-lg flex flex-col items-center justify-center text-gray-400 gap-2">
-                                                    <div className="w-16 h-10 bg-gray-100 rounded border border-gray-200"></div>
-                                                    <span className="text-xs font-bold uppercase tracking-widest">Email Screenshot Placeholder</span>
+                                                {/* Email Instruction Image */}
+                                                <div className="w-full rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                                                    <img
+                                                        src="/email-confirmation-example.png"
+                                                        alt="Email Confirmation Example"
+                                                        className="w-full h-auto object-cover"
+                                                    />
                                                 </div>
                                             </div>
                                         </div>
