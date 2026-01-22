@@ -424,16 +424,19 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                                     </div>
 
                                     {/* Main Video */}
-                                    <div className="w-full aspect-video bg-black rounded-xl overflow-hidden shadow-2xl relative group cursor-pointer border-4 border-black">
-                                        <div className="absolute inset-0 bg-[url('/assets/video-thumbnail.jpg')] bg-cover opacity-60 group-hover:opacity-40 transition-opacity"></div>
-                                        <div className="absolute inset-0 flex items-center justify-center">
-                                            <div className="w-20 h-20 bg-[#FB841C] rounded-full flex items-center justify-center pl-1 shadow-[0_0_40px_rgba(251,132,28,0.5)] group-hover:scale-110 transition-transform">
-                                                <Play className="fill-white text-white w-8 h-8" />
-                                            </div>
-                                        </div>
-                                        <div className="absolute bottom-4 left-4 bg-black/90 px-3 py-1 rounded text-white text-xs font-bold uppercase tracking-widest border border-white/10">
-                                            The Celebrity Funnel Explained
-                                        </div>
+                                    {/* Main Video - Wistia Facade */}
+                                    <div className="w-full aspect-video bg-black rounded-xl overflow-hidden shadow-2xl relative group border-4 border-black">
+                                        <iframe
+                                            src="https://fast.wistia.net/embed/iframe/qgncf6wce6?videoFoam=true&autoPlay=false"
+                                            title="The Celebrity Funnel Explained"
+                                            allow="autoplay; fullscreen"
+                                            allowTransparency={true}
+                                            frameBorder="0"
+                                            scrolling="no"
+                                            className="w-full h-full absolute inset-0 rounded-lg"
+                                            name="wistia_embed_success"
+                                            loading="lazy"
+                                        ></iframe>
                                     </div>
 
                                     {/* Important Email Instruction */}
