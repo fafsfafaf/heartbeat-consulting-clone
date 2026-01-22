@@ -12,6 +12,8 @@ import { Button } from './components/ui/Button';
 import { AboutUs } from './components/AboutUs';
 import { Careers } from './components/Careers';
 import { Blog } from './components/Blog';
+import { PrivacyPolicy } from './components/PrivacyPolicy';
+import { TermsOfService } from './components/TermsOfService';
 import { ArrowRight } from 'lucide-react';
 
 // Lazy load BookingModal
@@ -67,12 +69,12 @@ const FinalCTA = ({ onOpenModal }: { onOpenModal: () => void }) => (
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'serve' | 'career' | 'blog'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'serve' | 'career' | 'blog' | 'privacy' | 'terms'>('home');
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  const navigateTo = (page: 'home' | 'about' | 'serve' | 'career' | 'blog') => {
+  const navigateTo = (page: 'home' | 'about' | 'serve' | 'career' | 'blog' | 'privacy' | 'terms') => {
     setCurrentPage(page);
     window.scrollTo(0, 0);
   };
@@ -96,7 +98,10 @@ function App() {
 
   return (
     <div className="bg-[#141414] text-white font-sans selection:bg-[#FB841C] selection:text-white">
-      <Header onOpenModal={openModal} onNavigate={navigateTo} />
+      {/* Conditionally render header based on page */}
+      {currentPage !== 'privacy' && currentPage !== 'terms' && (
+        <Header onOpenModal={openModal} onNavigate={navigateTo as any} />
+      )}
 
       <main>
         {currentPage === 'home' ? (
@@ -115,12 +120,20 @@ function App() {
           <WhoWeServe onOpenModal={openModal} />
         ) : currentPage === 'career' ? (
           <Careers onOpenModal={openModal} />
-        ) : (
+        ) : currentPage === 'blog' ? (
           <Blog onOpenModal={openModal} />
+        ) : currentPage === 'privacy' ? (
+          <PrivacyPolicy onBack={() => navigateTo('home')} />
+        ) : (
+          <TermsOfService onBack={() => navigateTo('home')} />
         )}
       </main>
 
-      <Footer onNavigate={navigateTo} />
+      {/* Conditionally render footer based on page */}
+      {currentPage !== 'privacy' && currentPage !== 'terms' && (
+        <Footer onNavigate={navigateTo as any} />
+      )}
+
       <Suspense fallback={null}>
         {isModalOpen && <BookingModal isOpen={isModalOpen} onClose={closeModal} />}
       </Suspense>

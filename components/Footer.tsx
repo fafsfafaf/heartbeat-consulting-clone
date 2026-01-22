@@ -99,13 +99,24 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             {/* Column 2 - Legal */}
             <FooterColumn title="Legal">
               <ul className="space-y-4">
-                {['Imprint', 'Privacy Policy'].map(item => (
-                  <li key={item}>
-                    <a href="#" className="text-gray-600 hover:text-[#FB841C] transition-colors text-sm font-medium block">
-                      {item}
-                    </a>
-                  </li>
-                ))}
+                <li>
+                  <a
+                    href="#"
+                    onClick={(e) => { e.preventDefault(); if (onNavigate) { onNavigate('terms' as any); window.scrollTo(0, 0); } }}
+                    className="text-gray-600 hover:text-[#FB841C] transition-colors text-sm font-medium block"
+                  >
+                    Imprint & Terms
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    onClick={(e) => { e.preventDefault(); if (onNavigate) { onNavigate('privacy' as any); window.scrollTo(0, 0); } }}
+                    className="text-gray-600 hover:text-[#FB841C] transition-colors text-sm font-medium block"
+                  >
+                    Privacy Policy
+                  </a>
+                </li>
               </ul>
             </FooterColumn>
 
