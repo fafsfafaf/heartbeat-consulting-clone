@@ -146,7 +146,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           © {new Date().getFullYear()} HeartbyteAI. All Rights Reserved.
         </p>
       </div>
-    </div >
-    </footer >
+    </footer>
   );
 };
