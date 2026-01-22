@@ -68,17 +68,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
           <div className="lg:w-[55%] w-full order-1">
             <div className="relative rounded-xl overflow-hidden shadow-2xl bg-[#141414] border border-[#333] group aspect-video">
               {/* Wistia Facade */}
-              <iframe
-                src="https://fast.wistia.net/embed/iframe/qgncf6wce6?videoFoam=true&autoPlay=false"
-                title="Heartbyte AI Video"
-                allow="autoplay; fullscreen"
-                allowTransparency={true}
-                frameBorder="0"
-                scrolling="no"
-                className="w-full h-full absolute inset-0 rounded-xl"
-                name="wistia_embed"
-                loading="lazy"
-              ></iframe>
+              {/* Vimeo Embed based on User Request */}
+              <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+                <iframe
+                  src="https://player.vimeo.com/video/1157365471?badge=0&autopause=0&player_id=0&app_id=58479"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                  title="Welcome Video"
+                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                ></iframe>
+              </div>
+              <script src="https://player.vimeo.com/api/player.js"></script>
             </div>
           </div>
 

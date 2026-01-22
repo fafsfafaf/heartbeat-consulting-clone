@@ -469,29 +469,50 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                                         <h3 className="text-xl md:text-2xl font-bold text-black mb-8 uppercase tracking-tight">
                                             Get Your <span className="text-[#FB841C]">Questions Answered</span> Before The Call!
                                         </h3>
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                                            {[1, 2, 3, 4, 5].map((i) => (
-                                                <div key={i} className="group cursor-pointer">
-                                                    <div className="aspect-video bg-black rounded-lg overflow-hidden relative mb-3 border border-gray-200 group-hover:border-[#FB841C] transition-all">
-                                                        <div className="absolute inset-0 bg-[#1a1a1a] flex items-center justify-center">
-                                                            <Play className="fill-white text-white w-8 h-8 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all" />
-                                                        </div>
-                                                        <div className="absolute bottom-2 left-2 bg-[#FB841C] text-white text-[10px] font-bold px-1.5 py-0.5 rounded">
-                                                            2:45
-                                                        </div>
-                                                    </div>
-                                                    <div className="p-2">
-                                                        <h4 className="text-base font-extrabold text-black leading-tight group-hover:text-[#FB841C] transition-colors text-left mt-2">
-                                                            {i === 1 ? "How does the AI handle HIPAA compliance?" :
-                                                                i === 2 ? "What is the setup time for a clinic?" :
-                                                                    i === 3 ? "Does this integrate with my EMR?" :
-                                                                        i === 4 ? "What guarantees do you offer on results?" :
-                                                                            "Pricing & ROI Breakdown Explanation"}
-                                                        </h4>
-                                                    </div>
+                                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                            {/* Video 1: Agency vs Growth Partner */}
+                                            <div className="group">
+                                                <div style={{ padding: '55.64% 0 0 0', position: 'relative' }} className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                                                    <iframe
+                                                        src="https://player.vimeo.com/video/1157366144?badge=0&autopause=0&player_id=0&app_id=58479"
+                                                        frameBorder="0"
+                                                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                                                        title="MARKETING AGENCY VS. GROWTH PARTNER"
+                                                    ></iframe>
                                                 </div>
-                                            ))}
+                                                <h4 className="text-sm font-bold text-black mt-3 uppercase tracking-wide">Marketing Agency vs. Growth Partner</h4>
+                                            </div>
+
+                                            {/* Video 2: AI Celebrity Funnel */}
+                                            <div className="group">
+                                                <div style={{ padding: '55.64% 0 0 0', position: 'relative' }} className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                                                    <iframe
+                                                        src="https://player.vimeo.com/video/1157366283?badge=0&autopause=0&player_id=0&app_id=58479"
+                                                        frameBorder="0"
+                                                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                                                        title="OUR AI CELEBRITY FUNNEL"
+                                                    ></iframe>
+                                                </div>
+                                                <h4 className="text-sm font-bold text-black mt-3 uppercase tracking-wide">Our AI Celebrity Funnel</h4>
+                                            </div>
+
+                                            {/* Video 3: I've Been Burned */}
+                                            <div className="group">
+                                                <div style={{ padding: '55.64% 0 0 0', position: 'relative' }} className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                                                    <iframe
+                                                        src="https://player.vimeo.com/video/1157365703?badge=0&autopause=0&player_id=0&app_id=58479"
+                                                        frameBorder="0"
+                                                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                                                        title="IVE BEEN BURN IN THE PAST"
+                                                    ></iframe>
+                                                </div>
+                                                <h4 className="text-sm font-bold text-black mt-3 uppercase tracking-wide">I've Been Burned In The Past?</h4>
+                                            </div>
                                         </div>
+                                        <script src="https://player.vimeo.com/api/player.js"></script>
                                     </div>
 
                                 </div>
