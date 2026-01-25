@@ -113,7 +113,9 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                 },
                 body: JSON.stringify({
                     submittedAt: new Date().toISOString(),
-                    ...formData
+                    ...formData,
+                    // Send formatted phone number (e.g. "+1 5551234567")
+                    formattedPhone: `${formData.countryCode} ${formData.phone}`
                 }),
             });
         } catch (err) {
