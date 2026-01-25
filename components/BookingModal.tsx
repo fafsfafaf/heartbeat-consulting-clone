@@ -408,12 +408,12 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                                         Pick a time for your <span className="text-[#FB841C]">Strategy Call</span>
                                     </h3>
 
-                                    {/* LeadConnector Embed */}
-                                    <div className="w-full flex-grow bg-white rounded-lg overflow-hidden flex flex-col relative min-h-[500px]">
+                                    {/* Google Calendar Embed */}
+                                    <div className="w-full flex-grow bg-white rounded-lg overflow-hidden flex flex-col relative min-h-[600px]">
                                         <iframe
-                                            src="https://api.leadconnectorhq.com/widget/booking/cn9eXnNiwLwOJxTCyp6G"
-                                            style={{ width: '100%', border: 'none', height: '100%', minHeight: '500px' }}
-                                            id="booking-widget"
+                                            src="https://calendar.google.com/calendar/appointments/AcZssZ0tmYabl8Mh5J0eUKS8Fotd3RGrLL_ccMxq2AE=?gv=true"
+                                            style={{ border: 0, width: '100%', height: '600px' }}
+                                            frameBorder="0"
                                             title="Booking Calendar"
                                         ></iframe>
                                     </div>
