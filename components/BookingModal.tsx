@@ -24,6 +24,24 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
         };
     }, [isOpen]);
 
+    // Load LeadConnector form embed script when on Step 7
+    useEffect(() => {
+        if (step === 7) {
+            const script = document.createElement('script');
+            script.src = "https://link.msgsndr.com/js/form_embed.js";
+            script.async = true;
+            script.type = "text/javascript";
+            document.body.appendChild(script);
+
+            return () => {
+                // Optional cleanup
+                if (document.body.contains(script)) {
+                    document.body.removeChild(script);
+                }
+            };
+        }
+    }, [step]);
+
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -408,13 +426,13 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                                         Pick a time for your <span className="text-[#FB841C]">Strategy Call</span>
                                     </h3>
 
-                                    {/* Google Calendar Embed */}
+                                    {/* LeadConnector Widget (New) */}
                                     <div className="w-full flex-grow bg-white rounded-lg overflow-hidden flex flex-col relative min-h-[600px]">
                                         <iframe
-                                            src="https://calendar.google.com/calendar/embed?src=info%40heartbyteai.com&ctz=Europe%2FBerlin"
-                                            style={{ border: 0, width: '100%', height: '600px' }}
-                                            frameBorder="0"
+                                            src="https://api.leadconnectorhq.com/widget/booking/bs9R5b3wGlVhR4MduFlb"
+                                            style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '600px' }}
                                             scrolling="no"
+                                            id="L8Wa8SWk05fH54w3zf7q_1769384098750"
                                             title="Booking Calendar"
                                         ></iframe>
                                     </div>
