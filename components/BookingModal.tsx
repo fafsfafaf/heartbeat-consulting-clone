@@ -424,19 +424,18 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                                     </div>
 
                                     {/* Main Video */}
-                                    {/* Main Video - Wistia Facade */}
-                                    <div className="w-full aspect-video bg-black rounded-xl overflow-hidden shadow-2xl relative group border-4 border-black">
-                                        <iframe
-                                            src="https://fast.wistia.net/embed/iframe/qgncf6wce6?videoFoam=true&autoPlay=false"
-                                            title="The Celebrity Funnel Explained"
-                                            allow="autoplay; fullscreen"
-                                            allowTransparency={true}
-                                            frameBorder="0"
-                                            scrolling="no"
-                                            className="w-full h-full absolute inset-0 rounded-lg"
-                                            name="wistia_embed_success"
-                                            loading="lazy"
-                                        ></iframe>
+                                    {/* Main Video - Vimeo Embed */}
+                                    <div className="w-full rounded-xl overflow-hidden shadow-2xl relative group border-4 border-black">
+                                        <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+                                            <iframe
+                                                src="https://player.vimeo.com/video/1158152695?badge=0&autopause=0&player_id=0&app_id=58479"
+                                                frameBorder="0"
+                                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                                                title="Introduction"
+                                            ></iframe>
+                                        </div>
+                                        <script src="https://player.vimeo.com/api/player.js"></script>
                                     </div>
 
                                     {/* Important Email Instruction */}
@@ -513,6 +512,34 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                                                     ></iframe>
                                                 </div>
                                                 <h4 className="text-sm font-bold text-black mt-3 uppercase tracking-wide">I've Been Burned In The Past?</h4>
+                                            </div>
+
+                                            {/* Video 4: Why 90 Day Agreements */}
+                                            <div className="group">
+                                                <div style={{ padding: '55.64% 0 0 0', position: 'relative' }} className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                                                    <iframe
+                                                        src="https://player.vimeo.com/video/1158152396?badge=0&autopause=0&player_id=0&app_id=58479"
+                                                        frameBorder="0"
+                                                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                                                        title="WHY DO YOU WORK IN 90 DAY AGREEMENTS"
+                                                    ></iframe>
+                                                </div>
+                                                <h4 className="text-sm font-bold text-black mt-3 uppercase tracking-wide">Why Do You Work In 90 Day Agreements?</h4>
+                                            </div>
+
+                                            {/* Video 5: Why Not Just Hire In-House */}
+                                            <div className="group">
+                                                <div style={{ padding: '55.64% 0 0 0', position: 'relative' }} className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                                                    <iframe
+                                                        src="https://player.vimeo.com/video/1158152514?badge=0&autopause=0&player_id=0&app_id=58479"
+                                                        frameBorder="0"
+                                                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                                                        title="WHY NOT JUST HIRE AN IN-HOUSE MARKETER"
+                                                    ></iframe>
+                                                </div>
+                                                <h4 className="text-sm font-bold text-black mt-3 uppercase tracking-wide">Why Not Just Hire An In-House Marketer?</h4>
                                             </div>
                                         </div>
                                         <script src="https://player.vimeo.com/api/player.js"></script>
