@@ -429,10 +429,10 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                                     {/* LeadConnector Widget (New) */}
                                     <div className="w-full flex-grow bg-white rounded-lg overflow-hidden flex flex-col relative min-h-[600px]">
                                         <iframe
-                                            src="https://api.leadconnectorhq.com/widget/booking/bs9R5b3wGlVhR4MduFlb"
+                                            src="https://api.leadconnectorhq.com/widget/booking/EGOPakzxyj76o16xqSqe"
                                             style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '600px' }}
                                             scrolling="no"
-                                            id="L8Wa8SWk05fH54w3zf7q_1769384098750"
+                                            id="EGOPakzxyj76o16xqSqe_1769384485579"
                                             title="Booking Calendar"
                                         ></iframe>
                                     </div>
