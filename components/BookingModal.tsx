@@ -104,11 +104,31 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
         handleNext();
     };
 
+    const submitToWebhook = async () => {
+        try {
+            await fetch('https://n8n.srv824470.hstgr.cloud/webhook/leadfunnel', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    submittedAt: new Date().toISOString(),
+                    ...formData
+                }),
+            });
+        } catch (err) {
+            console.error('Webhook submission failed:', err);
+            // We do not block the user flow if webhook fails
+        }
+    };
+
     const validateStep6 = () => {
         if (!formData.phone.trim() || formData.phone.length < 5) {
             setError("Please enter a valid phone number.");
             return;
         }
+        // Submit data to webhook before moving to booking calendar
+        submitToWebhook();
         handleNext();
     };
 
