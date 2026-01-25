@@ -411,9 +411,10 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                                     {/* Google Calendar Embed */}
                                     <div className="w-full flex-grow bg-white rounded-lg overflow-hidden flex flex-col relative min-h-[600px]">
                                         <iframe
-                                            src="https://calendar.google.com/calendar/appointments/AcZssZ0tmYabl8Mh5J0eUKS8Fotd3RGrLL_ccMxq2AE=?gv=true"
+                                            src="https://calendar.google.com/calendar/embed?src=info%40heartbyteai.com&ctz=Europe%2FBerlin"
                                             style={{ border: 0, width: '100%', height: '600px' }}
                                             frameBorder="0"
+                                            scrolling="no"
                                             title="Booking Calendar"
                                         ></iframe>
                                     </div>
