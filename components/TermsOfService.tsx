@@ -30,7 +30,7 @@ export const TermsOfService: React.FC<LegalPageProps> = ({ onBack }) => {
                         <h2 className="text-xl font-bold text-white mb-4 uppercase tracking-wide text-[#FB841C]">Impressum (Imprint)</h2>
                         <div className="space-y-1 text-gray-300">
                             <p className="font-bold text-white">SCALIFAI LTD</p>
-                            <p>Angaben gemäß § 5 TMG</p>
+                            <p>Information according to § 5 TMG</p>
                             <br />
                             <p className="font-bold">Represented by: Erkan Yusufoglu</p>
                             <p>Eigenstraße 97D</p>
