@@ -14,6 +14,7 @@ import { Careers } from './components/Careers';
 import { Blog } from './components/Blog';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { TermsOfService } from './components/TermsOfService';
+import { ImportantPage } from './components/ImportantPage';
 import { ArrowRight } from 'lucide-react';
 
 // Lazy load BookingModal
@@ -69,7 +70,14 @@ const FinalCTA = ({ onOpenModal }: { onOpenModal: () => void }) => (
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'serve' | 'career' | 'blog' | 'privacy' | 'terms'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'serve' | 'career' | 'blog' | 'privacy' | 'terms' | 'important'>('home');
+
+  useEffect(() => {
+    const path = window.location.pathname.toLowerCase();
+    if (path === '/important') {
+      setCurrentPage('important');
+    }
+  }, []);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -124,6 +132,8 @@ function App() {
           <Blog onOpenModal={openModal} />
         ) : currentPage === 'privacy' ? (
           <PrivacyPolicy onBack={() => navigateTo('home')} />
+        ) : currentPage === 'important' ? (
+          <ImportantPage />
         ) : (
           <TermsOfService onBack={() => navigateTo('home')} />
         )}
