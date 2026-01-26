@@ -20,10 +20,27 @@ export const TermsOfService: React.FC<LegalPageProps> = ({ onBack }) => {
                     <ArrowLeft size={20} /> Back to Home
                 </button>
 
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">Terms & Conditions</h1>
+                <h1 className="text-4xl md:text-5xl font-bold mb-4">Imprint & Terms of Service</h1>
                 <p className="text-gray-400 mb-12">Last Updated: February 20, 2023</p>
 
                 <div className="space-y-8 text-gray-300 leading-relaxed">
+
+                    {/* Impressum Section */}
+                    <div className="bg-[#1f1f1f] p-6 rounded-xl border border-white/10 mb-8">
+                        <h2 className="text-xl font-bold text-white mb-4 uppercase tracking-wide text-[#FB841C]">Impressum (Imprint)</h2>
+                        <div className="space-y-1 text-gray-300">
+                            <p className="font-bold text-white">HeartbyteAI</p>
+                            <p>Angaben gemäß § 5 TMG</p>
+                            <br />
+                            <p className="font-bold">Erkan Yusufoglu</p>
+                            <p>Eigenstraße 97D</p>
+                            <p>47053 Duisburg</p>
+                            <p>Germany</p>
+                            <br />
+                            <p><strong>Contact:</strong> info@heartbyteai.com</p>
+                        </div>
+                    </div>
+
                     <section>
                         <h2 className="text-2xl font-bold text-white mb-4">General</h2>
                         <p>
