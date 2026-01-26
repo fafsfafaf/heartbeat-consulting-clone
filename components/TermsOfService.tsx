@@ -29,15 +29,19 @@ export const TermsOfService: React.FC<LegalPageProps> = ({ onBack }) => {
                     <div className="bg-[#1f1f1f] p-6 rounded-xl border border-white/10 mb-8">
                         <h2 className="text-xl font-bold text-white mb-4 uppercase tracking-wide text-[#FB841C]">Impressum (Imprint)</h2>
                         <div className="space-y-1 text-gray-300">
-                            <p className="font-bold text-white">HeartbyteAI</p>
+                            <p className="font-bold text-white">SCALIFAI LTD</p>
                             <p>Angaben gemäß § 5 TMG</p>
                             <br />
-                            <p className="font-bold">Erkan Yusufoglu</p>
+                            <p className="font-bold">Represented by: Erkan Yusufoglu</p>
                             <p>Eigenstraße 97D</p>
                             <p>47053 Duisburg</p>
                             <p>Germany</p>
                             <br />
                             <p><strong>Contact:</strong> info@heartbyteai.com</p>
+                            <br />
+                            <p className="text-sm text-gray-500 italic border-t border-white/10 pt-2 mt-2">
+                                By providing your phone number, you agree to receive text messages from SCALIFAI LTD. Message and data rates may apply. Reply STOP to opt out.
+                            </p>
                         </div>
                     </div>
 
