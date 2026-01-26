@@ -82,12 +82,45 @@ function App() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  const navigateTo = (page: 'home' | 'about' | 'serve' | 'career' | 'blog' | 'privacy' | 'terms') => {
+  // Page Handling & Routing
+  const navigateTo = (page: 'home' | 'about' | 'serve' | 'career' | 'blog' | 'privacy' | 'terms' | 'important') => {
     setCurrentPage(page);
     window.scrollTo(0, 0);
+
+    // Update URL
+    const path = page === 'home' ? '/' : `/${page}`;
+    window.history.pushState({ page }, '', path);
   };
 
-  // Preload the BookingModal when the user begins to interact with the page
+  useEffect(() => {
+    // 1. Handle Initial Load
+    const handleInitialPath = () => {
+      const path = window.location.pathname.toLowerCase().replace('/', '');
+
+      if (path === 'important') setCurrentPage('important');
+      else if (path === 'about') setCurrentPage('about');
+      else if (path === 'serve') setCurrentPage('serve');
+      else if (path === 'career') setCurrentPage('career');
+      else if (path === 'blog') setCurrentPage('blog');
+      else if (path === 'privacy') setCurrentPage('privacy');
+      else if (path === 'terms') setCurrentPage('terms');
+      else setCurrentPage('home');
+    };
+
+    handleInitialPath();
+
+    // 2. Handle Browser Back/Forward
+    const handlePopState = (event: PopStateEvent) => {
+      if (event.state && event.state.page) {
+        setCurrentPage(event.state.page);
+      } else {
+        handleInitialPath();
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
   useEffect(() => {
     const preloadModal = () => {
       import('./components/BookingModal');
